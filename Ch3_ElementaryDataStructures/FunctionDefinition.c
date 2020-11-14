@@ -1,3 +1,6 @@
+/* This program defines a function named lg, which calculates the greatest integer larger than or equal to N, which is provided as its argument.\
+ The values of N used are all powers of 10, specifically the powers 1 to 6. */
+
 #include <stdio.h>
 
 int lg(int N)
