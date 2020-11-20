@@ -1,0 +1,28 @@
+Ans. It would result in an unexpected behaviour.
+
+Explaination:
+The array is declared as int a[99], which means that the indices range from 0 to 98.
+The assignment statement inside the second for loop in it's first iteration results in the program accessing index 99, which is out of bounds.
+C (and C++) doesn't implement array bound testing, so it might not generate any errors, and the program may work just fine.
+But, it also may be the case that a segmentation fault error is generated. Segmentation faults occur when the OS detects that our program is trying to access memory locations which it doesn't have the permission to access.
+Hence, the unexpected behaviour.
+
+If the program works well (without generating any segmentation faults), then the contents of the array will be:
+a[0]= -some garbage value-
+a[1]=1
+a[2]=2
+.
+.
+.
+a[47]=47
+a[48]=48
+a[49]=49
+a[50]=49
+a[51]=48
+a[52]=47
+.
+.
+.
+a[96]=3
+a[97]=2
+a[98]=1
