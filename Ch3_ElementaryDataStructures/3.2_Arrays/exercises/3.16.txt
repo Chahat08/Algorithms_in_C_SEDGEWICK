@@ -1,0 +1,2 @@
+Removing the if( a[i] ) test from the program would result in its runtime being proportional to O(N^2),
+instead of it being between O(N) and O(N^3/2).
